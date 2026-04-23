@@ -61,4 +61,4 @@ volumes:
     driver_opts:
       type: none
       device: /home/thcaquet/data/mariadb
-        o: bind
+      o: bind
