@@ -14,7 +14,7 @@ The Inception project is a comprehensive Docker-based solution that demonstrates
 
 1. **Clone the repository:**
    ```bash
-   git clone inception@42
+   git clone <inception@42>
    cd inception
    ```
 
