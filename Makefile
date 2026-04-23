@@ -1,11 +1,5 @@
 LOGIN = thcaquet
 
-TPUT = tput -T xterm-256color
-_RESET = $(shell $(TPUT) sgr0)
-_BOLD = $(shell $(TPUT) bold)
-_GREEN = $(shell $(TPUT) setaf 2)
-_RED = $(shell $(TPUT) setaf 1)
-
 DATA_DIR = /home/$(LOGIN)/data
 
 all: up
