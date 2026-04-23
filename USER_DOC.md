@@ -1,7 +1,17 @@
 # User Documentation
 
 ## Services Provided
-This project provides various services that can be utilized for managing and accessing system functionalities. 
+
+The Inception stack deploys the following services, each running in its own isolated Docker container on a shared bridge network named `inception` :
+
+| Service | Container Name | Description |
+|---------|---------------|-------------|
+| **Nginx** | `nginx` | Reverse proxy and TLS termination point. Handles all incoming HTTPS traffic on port 443 and routes requests to the appropriate backend service. |
+| **WordPress** | `wordpress` | The main web application. Served through PHP-FPM on port 9000, accessible via Nginx. |
+| **MariaDB** | `mariadb` | Relational database storing all WordPress data (posts, users, settings, etc.). |
+
+
+All services restart automatically on failure (`restart: unless-stopped`).
 
 ## Starting and Stopping the Project
 To start the project, run the command:
