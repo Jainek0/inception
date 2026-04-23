@@ -6,7 +6,7 @@ This document describes how to set up the environment from scratch, build and la
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/Jainek0/inception.git
+   git clone <inception@42>
    cd inception
    ```
 
@@ -18,7 +18,7 @@ This document describes how to set up the environment from scratch, build and la
 1. **Build the Project**
    Use the Makefile to build the project by running:
    ```bash
-   make build
+   docker build
    ```
 
 2. **Launch the Project**
@@ -33,10 +33,22 @@ This document describes how to set up the environment from scratch, build and la
   ```bash
   docker-compose down
   ```
+  
 - To list running containers:
   ```bash
   docker ps
   ```
+  
+- To debug containers:
+  ```bash
+  docker log <containers_name>
+  ```
+  
+- To manegement containers:
+  ```bash
+  docker -it <containers_name> bash
+  ```
+
 - To remove a volume, use:
   ```bash
   docker volume rm <volume_name>
@@ -48,6 +60,8 @@ The project data is stored in Docker volumes. You can inspect your volumes using
 ```bash
 docker volume ls
 ```
+
+
 
 ### Conclusion
 Following the above steps will set up the environment and ensure your project runs smoothly.

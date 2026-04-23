@@ -33,12 +33,12 @@ The Inception project is a comprehensive Docker-based solution that demonstrates
    make clean
    ```
 
- 4.1 **Full Clean (remove system resources):**
+5. **Full Clean (remove system resources):**
    ```bash
    make fclean
    ```
 
- 4.2 **Super full clean (remove everything including persistent volumes):**
+6. **Super full clean (remove everything including persistent volumes):**
    ```bash
    make sfclean
    ```
@@ -54,9 +54,9 @@ The Inception project is a comprehensive Docker-based solution that demonstrates
 inception/                  
 │
 ├── Makefile
-├── .env
 │
 ├── srcs/
+│   ├── .env
 │   ├── docker-compose.yml
 │   └── requirements/
 │       ├── nginx/
