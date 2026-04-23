@@ -407,3 +407,4 @@ Vous allez devoir mapper https://login.42.fr sur localhost. Pour ce faire, insta
 
 Une fois que tout ça est fait vous avez terminé la partie mandatory du projet ! Vous pouvez lancer le projet (installez Docker si vous ne le possédez pas sur votre VM) à l'aide de la commande `docker compose -f ./srcs/docker-compose.yml up -d`, -f pour spécifier votre fichier docker-compose.yml, "up" pour le lancer et "-d" pour lancer en mode "detach" comme ça il tourne en fond et vous n'êtes pas obligé de laisser votre terminal ouvert pour avoir vos conteneurs ON.
 # inception
+# inception
