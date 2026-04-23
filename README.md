@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by Jainek0.*
+*This project has been created as part of the 42 curriculum by thcaquet.*
 
 ## Description
 
@@ -14,34 +14,34 @@ The Inception project is a comprehensive Docker-based solution that demonstrates
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Jainek0/inception.git
+   git clone inception@42
    cd inception
    ```
 
-2. **Build the Docker images:**
+2. **Build the Docker images and Start all containers:**
    ```bash
-   make build
+   make
    ```
 
-3. **Start all containers:**
-   ```bash
-   make up
-   ```
-
-4. **View logs:**
-   ```bash
-   make logs
-   ```
-
-5. **Stop all containers:**
+3. **Stop all containers:**
    ```bash
    make down
    ```
 
-6. **Clean up (remove containers and images):**
+4. **Clean up (remove containers):**
    ```bash
    make clean
    ```
+
+4.1 **Full Clean (remove system resources):**
+```bash
+make fclean
+```
+
+4.2 **Super full clean (remove everything including persistent volumes):**
+```bash
+make sfclean
+```
 
 ### Project Structure
 
@@ -49,7 +49,29 @@ The Inception project is a comprehensive Docker-based solution that demonstrates
 - **Makefile:** Provides convenient commands for building, running, and managing containers
 - **Shell scripts:** Automate configuration and initialization tasks within containers
 
+```
+                           - - - - - (           git clone          ) - - - - -
+inception/                  
+│
+├── Makefile
+├── .env
+│
+├── srcs/
+│   ├── docker-compose.yml
+│   └── requirements/
+│       ├── nginx/
+│       ├── wordpress/
+│       └── mariadb/
+
+                           - - - - - (   generate persitant volume   ) - - - - -
+home/$(login)/data/                      
+ ├── wordpress/
+ └── mariadb/
+```
 ## Technical Architecture
+
+<img width="608" height="693" alt="Screenshot from 2026-04-23 09-34-02" src="https://github.com/user-attachments/assets/62b1bc2c-e807-4a6e-ad29-5459fc068f56" />
+
 
 ### Docker Usage
 
@@ -115,20 +137,10 @@ This project leverages Docker to create isolated, reproducible environments. Eac
 
 ### Makefile & Shell Scripting
 - [GNU Make Manual](https://www.gnu.org/software/make/manual/make.html)
-- [Shell Script Guide](https://www.shellscript.sh/)
 - [Bash Manual](https://www.gnu.org/software/bash/manual/bash.html)
-
-### 42 Curriculum Resources
-- [42 School Official Website](https://42.fr/)
-- [42 Intranet Resources](https://intra.42.fr/)
 
 ### AI Usage
 
 **ChatGPT and GitHub Copilot** were utilized for:
-- Generating Dockerfile syntax and best practices
-- Optimizing shell script logic and error handling
-- Creating Makefile targets and automation
-- Documenting architecture decisions and comparisons
+- Generating Dockerfile syntax and error handling
 - Structuring the README with comprehensive explanations
-
-These tools assisted in accelerating development and ensuring code quality, while all design decisions and implementations remain authentic to the project requirements.
